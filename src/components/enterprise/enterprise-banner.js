@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import bannerImage from '../../assets/image/enterprise/enterpriseBanner.png'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput from 'react-phone-input-2'
+
 import { AiFillCheckCircle } from 'react-icons/ai'
 import Carousel from "react-multi-carousel";
 
@@ -25,7 +26,7 @@ const responsive = {
 };
 
 export const EnterpriseBanner = () => {
-    const [value, setValue] = useState()
+    const [phone, setPhone] = useState({})
     return (
         <>
             <div style={{
@@ -36,7 +37,7 @@ export const EnterpriseBanner = () => {
             }}>
 
                 <div className="container mx-auto py-24">
-                    <div class="flex justify-center items-center justify-center flex-wrap">
+                    <div className="flex justify-center items-center justify-center flex-wrap">
                         <div className='w-full sm:w-full md:w-2/5 lg:w-2/5'>
                             <div className='p-10' >
                                 <p className='text-white  my-4 text-4xl font-bold leading-tight ' >দেশ সেরা এন্টারপ্রাইজ লজিস্টিকস পৌঁছাবে আপনার লক্ষ্যে</p>
@@ -65,11 +66,30 @@ export const EnterpriseBanner = () => {
                                 <p className='text-white text-center my-4' >বিনামুল্যে সাইন-আপ করুন মাত্র দুই মিনিটে</p>
                                 <div className='my-4'>
                                     <PhoneInput
-                                        international={false}
-                                        defaultCountry="BN"
-                                        placeholder="Enter phone number"
-                                        value={value}
-                                        onChange={setValue} />
+                                        placeholder={'Phone Number'}
+                                        enableAreaCodes={true}
+                                        containerStyle={{
+                                            height: 45
+                                        }}
+                                        inputStyle={{
+                                            height: 45,
+                                            paddingLeft: 65,
+                                            fontSize: 16,
+                                            width: "100%"
+                                        }}
+                                        buttonStyle={{
+                                            backgroundColor: 'transparent',
+                                            paddingLeft: 10,
+                                            paddingTop: 10,
+                                            paddingBottom: 10,
+                                        }}
+                                        disableCountryCode={false}
+                                        countryCodeEditable={false}
+                                        disableDropdown={true}
+                                        onlyCountries={['bd', 'bd']}
+                                        country={'bd'}
+                                        onChange={phone => setPhone({ phone: phone })}
+                                    />
                                 </div>
                                 <button className='bg-green-500 text-white w-full py-3 font-bold my-4 rounded' >সাইন-আপ </button>
                                 <div className='flex items-center gap-5 my-5' >

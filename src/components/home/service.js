@@ -5,7 +5,7 @@ export const Service = () => {
         <div className='my-20 container mx-auto'>
             <p className='text-3xl font-bold text-center ' >সার্ভিস সমূহ</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-5 mx-5">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-5 mx-5">
                 <div>
                     <img src={require('../../assets/image/home/service/parcel-delivery.webp')} alt="" />
                     <div className='my-2 p-1'>

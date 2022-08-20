@@ -4,6 +4,7 @@ import { ContactUs, EnterpriseBanner, MerchantStory, SortBanner, Vehicles } from
 import { Footer } from '../footer';
 import { Header } from '../header';
 import { Banner, ClientFeedback, CoverageArea, DeliveryCalculator, Faq, LogisticsPartner, Service } from '../home';
+import { Login } from '../login';
 
 
 export const Layout = ({ children }) => {
@@ -12,13 +13,14 @@ export const Layout = ({ children }) => {
 
             <Header />
             {/* home start  */}
-            {/* <Banner />
+            <Banner />
             <Service />
             <LogisticsPartner />
             <CoverageArea />
             <DeliveryCalculator />
             <ClientFeedback />
-            <Faq /> */}
+            <Faq />
+            <EnjoyDeliveryCharge />
             {/* home end  */}
 
             {/* <EnterpriseBanner />
@@ -27,10 +29,13 @@ export const Layout = ({ children }) => {
             <MerchantStory />
             <ContactUs />
             <SortBanner /> */}
-            <CourierBanner />
+
+            {/* <CourierBanner />
             <CourierSupport />
             <BranchLocation />
             <EnjoyDeliveryCharge />
+
+            <Login /> */}
 
             {children}
             <Footer />

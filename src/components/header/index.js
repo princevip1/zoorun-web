@@ -84,7 +84,7 @@ export const Header = () => {
         <Popover className="relative bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-                    <div className="flex justify-start lg:w-0 lg:flex-1">
+                    <div className="flex justify-start">
                         <a href="#">
                             <span className="sr-only">Workflow</span>
                             <img
@@ -100,8 +100,8 @@ export const Header = () => {
                             <MenuIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
                     </div>
-                    <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                        <Popover className="relative">
+                    <Popover.Group as="nav" className="hidden md:flex space-x-10 ">
+                        {/* <Popover className="relative">
                             {({ open }) => (
                                 <>
                                     <Popover.Button
@@ -164,16 +164,16 @@ export const Header = () => {
                                     </Transition>
                                 </>
                             )}
-                        </Popover>
+                        </Popover> */}
 
                         <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                            Pricing
+                            Enterprise
                         </a>
                         <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                            Docs
+                            Courier
                         </a>
 
-                        <Popover className="relative">
+                        {/* <Popover className="relative">
                             {({ open }) => (
                                 <>
                                     <Popover.Button
@@ -243,7 +243,7 @@ export const Header = () => {
                                     </Transition>
                                 </>
                             )}
-                        </Popover>
+                        </Popover> */}
                     </Popover.Group>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                         <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
@@ -275,7 +275,7 @@ export const Header = () => {
                                 <div>
                                     <img
                                         className="h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                        src={require('../../assets/image/logo.png')}
                                         alt="Workflow"
                                     />
                                 </div>
@@ -288,7 +288,7 @@ export const Header = () => {
                             </div>
                             <div className="mt-6">
                                 <nav className="grid gap-y-8">
-                                    {solutions.map((item) => (
+                                    {/* {solutions.map((item) => (
                                         <a
                                             key={item.name}
                                             href={item.href}
@@ -297,28 +297,28 @@ export const Header = () => {
                                             <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                                             <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                                         </a>
-                                    ))}
+                                    ))} */}
                                 </nav>
                             </div>
                         </div>
                         <div className="py-6 px-5 space-y-6">
                             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                                    Pricing
+                                    Enterprise
                                 </a>
 
                                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                                    Docs
+                                    Courier
                                 </a>
-                                {resources.map((item) => (
+                                {/* {resources.map((item) => (
                                     <a
                                         key={item.name}
                                         href={item.href}
                                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                                     >
                                         {item.name}
-                                    </a>
-                                ))}
+                                    </a> */}
+                                {/* ))} */}
                             </div>
                             <div>
                                 <a

@@ -27,8 +27,8 @@ const data = [
 export const Faq = () => {
     const [index, setIndex] = useState(1)
     return (
-        <div className='my-20 container mx-auto flex items-center justify-center'>
-            <div style={{ width: "50%" }} className="mt-10">
+        <div className='my-20 container mx-auto flex items-center justify-center px-5 sm:px-5 md:px-0 lg:px-0'>
+            <div className="mt-10 w-full sm:w-full md:w-1/2	lg:w-1/2">
                 <p className='text-3xl font-bold text-center my-5' >আপনার সকল জিজ্ঞাসা</p>
                 <p className='text-lg text-center' >সর্বাধিক জিজ্ঞাসিত প্রশ্নগুলি দেখুন, যেকোনো প্রয়োজনে আমরা আপনার পাশে আছি</p>
 

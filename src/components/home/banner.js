@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Carousel from "react-multi-carousel";
 import ReactPlayer from 'react-player'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput from 'react-phone-input-2'
+
 const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -23,7 +24,8 @@ const responsive = {
 };
 
 export const Banner = () => {
-    const [value, setValue] = useState()
+    const [phone, setPhone] = useState({})
+
     return (
         <div style={{ position: "relative" }} >
             <Carousel
@@ -34,36 +36,68 @@ export const Banner = () => {
                 autoPlaySpeed={6000}
                 infinite={true}
                 responsive={responsive}>
-                <div  >
-                    <ReactPlayer width={"100%"} muted={true} playing={true} height={560} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-1.webm" />
+                <div className=' h-full sm:h-full  md:h-3/5 lg:h-3/5' >
+                    <ReactPlayer width={"100%"} muted={true} playing={true} height={'100%'} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-1.webm" />
                 </div>
-                <div>
-                    <ReactPlayer width={'100%'} muted={true} playing={true} height={560} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-2.webm" />
+                <div className=' h-full sm:h-full  md:h-3/5 lg:h-3/5' >
+                    <ReactPlayer width={'100%'} muted={true} playing={true} height={'100%'} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-2.webm" />
                 </div>
-                <div>
-                    <ReactPlayer width={'100%'} muted={true} playing={true} height={560} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-3.webm" />
+                <div className=' h-full sm:h-full  md:h-3/5 lg:h-3/5' >
+                    <ReactPlayer width={'100%'} muted={true} playing={true} height={'100%'} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-3.webm" />
                 </div>
-                <div> <ReactPlayer width={'100%'} muted={true} playing={true} height={560} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-4.webm" /></div>
+                <div className=' h-full sm:h-full  md:h-3/5 lg:h-3/5' >
+                    <ReactPlayer width={'100%'} muted={true} playing={true} height={'100%'} url="https://d118vismjsp9sl.cloudfront.net/web2.0/video/hero-video-4.webm" />
+                </div>
             </Carousel>
 
-            <div style={{ position: "absolute", top: 0, right: 0, width: 500, backgroundColor: "black", height: 580, borderBottomLeftRadius: 20 }}>
-                <div className='p-10' >
-                    <p className='text-white text-center my-4' >বিনামুল্যে সাইন-আপ করুন মাত্র দুই মিনিটে</p>
-                    <div className='my-4'>
-                        <PhoneInput
-                            international={false}
-                            defaultCountry="BN"
-                            placeholder="Enter phone number"
-                            value={value}
-                            onChange={setValue} />
+            <div
+                className=' w-full sm:w-full  md:w-1/3	 lg:w-1/3  h-full sm:h-full  md:h-3/5 lg:h-3/5 md:absolute lg:absolute top-0 right-0 bg-black '
+                style={{
+                    borderBottomLeftRadius: 20
+                }}
+            >
+                <div className="w-full sm:w-full  md:w-3/4 lg:w-3/4   mx-auto px-4 sm:px-4 md:px-0 lg:px-0 py-10 sm:py-10 md:py-24 lg:py-24">
+                    <div className="">
+                        <p className='text-white text-center my-4' >বিনামুল্যে সাইন-আপ করুন মাত্র দুই মিনিটে</p>
+                        <div className='my-4'>
+
+                            <PhoneInput
+                                placeholder={'Phone Number'}
+                                enableAreaCodes={true}
+                                containerStyle={{
+                                    height: 45
+                                }}
+                                inputStyle={{
+                                    height: 45,
+                                    paddingLeft: 65,
+                                    fontSize: 16,
+                                    width: "100%"
+                                }}
+                                buttonStyle={{
+                                    backgroundColor: 'transparent',
+                                    paddingLeft: 10,
+                                    paddingTop: 10,
+                                    paddingBottom: 10,
+                                }}
+                                disableCountryCode={false}
+                                countryCodeEditable={false}
+                                disableDropdown={true}
+                                onlyCountries={['bd', 'bd']}
+                                country={'bd'}
+                                onChange={phone => setPhone({ phone: phone })}
+                            />
+                        </div>
+                        <button className='bg-green-500 text-white w-full py-3 font-bold my-4 rounded' >সাইন-আপ </button>
+                        <div className='flex items-center gap-5 my-5' >
+                            <div style={{ border: '.05px solid white', width: 400, height: 0 }} ></div>
+                            <p className='text-white' >অথবা,</p>
+                            <div style={{ border: '.05px solid white', width: 400, height: 0 }} ></div>
+                        </div>
+                        <div className=" flex rounded-md border-r-0">
+                            <input type="text" name="company-website" id="company-website" className="border focus:ring-green-500 focus:border-green-500 focus:border flex-1 block w-full   rounded-l sm:text-sm border-gray-300 px-5 " placeholder="পার্সেল আইডি" />
+                            <span className="inline-flex items-center px-10 py-2 rounded-r-md border-l-0 border-gray-300 bg-green-600  text-lg text-white"> ট্র্যাক</span>
+                        </div>
                     </div>
-                    <button className='bg-green-500 text-white w-full py-3 font-bold my-4 rounded' >সাইন-আপ </button>
-                    <div className='flex items-center gap-5 my-5' >
-                        <div style={{ border: '.05px solid white', width: 400, height: 0 }} ></div>
-                        <p className='text-white' >অথবা,</p>
-                        <div style={{ border: '.05px solid white', width: 400, height: 0 }} ></div>
-                    </div>
-                    <input className='w-full my-5 p-3 rounded border-green-500' placeholder='ট্র্যাকিং আইডি দিন ' type="text" />
                 </div>
 
             </div>

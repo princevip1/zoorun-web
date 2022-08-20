@@ -12,8 +12,8 @@ export const Footer = () => {
     return (
         <div className='bg-green-600' >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 text-gray-200">
-                <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6">
-                    <div class="p-4 col-span-2" >
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6">
+                    <div className="p-4 col-span-2" >
                         <img className='my-4' src={require('../../assets/image/logo.png')} alt="" />
                         <p className='my-4'>দ্রুততম সল্যুশনের জন্য Zoorun অ্যাপটি ডাউনলোড করুন</p>
                         <a target={'_blank'} href="/">
@@ -21,7 +21,7 @@ export const Footer = () => {
                         </a>
                     </div>
 
-                    <div class=" p-4 ">
+                    <div className=" p-4 ">
                         <p className='text-xl font-semibold' >গুরুত্বপূর্ণ লিংক</p>
                         <div className=" mt-4 ">
                             <a href="/">
@@ -41,7 +41,7 @@ export const Footer = () => {
                             </a>
                         </div>
                     </div>
-                    <div class=" p-4">
+                    <div className=" p-4">
                         <p className='text-xl font-semibold' >যোগাযোগ</p>
                         <div className=" mt-4 ">
                             <a href="/">
@@ -56,7 +56,7 @@ export const Footer = () => {
 
                         </div>
                     </div>
-                    <div class=" p-4">
+                    <div className=" p-4">
                         <p className='text-xl font-semibold' >সংযুক্ত হন</p>
                         <div className=" mt-4 flex gap-2">
                             <a href="/">

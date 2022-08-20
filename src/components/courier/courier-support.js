@@ -3,7 +3,7 @@ import React from 'react';
 export const CourierSupport = () => {
     return (
         <div className='max-w-7xl mx-auto px-4 sm:px-6 my-10 sm:my-10 md:my-20 lg:my-20'>
-            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-5 mx-5">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-5 mx-5">
                 <div className=''>
                     <div className='flex items-center justify-center'>
                         <img className='w-24' src={require('../../assets/image/home/logisticks/avail-any-vehicle.png')} alt="" />

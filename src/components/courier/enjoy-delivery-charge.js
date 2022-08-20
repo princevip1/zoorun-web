@@ -3,7 +3,7 @@ import React from 'react';
 export const EnjoyDeliveryCharge = () => {
     return (
         <div className='py-10 sm:py-10 md:py-10 lg:py-10 max-w-7xl mx-auto px-4 sm:px-6'>
-            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-5 mx-5 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-5 mx-5 items-center">
                 <div>
                     <img src={require('../../assets/image/courier/del-boy.jpeg')} alt="" />
                 </div>
